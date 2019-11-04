@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/creditCardMaker/static/css/main.0b446f49.chunk.css",
+    "main.js": "/creditCardMaker/static/js/main.45b33f56.chunk.js",
+    "main.js.map": "/creditCardMaker/static/js/main.45b33f56.chunk.js.map",
+    "runtime-main.js": "/creditCardMaker/static/js/runtime-main.5a33fb0a.js",
+    "runtime-main.js.map": "/creditCardMaker/static/js/runtime-main.5a33fb0a.js.map",
+    "static/js/2.ea4f69d7.chunk.js": "/creditCardMaker/static/js/2.ea4f69d7.chunk.js",
+    "static/js/2.ea4f69d7.chunk.js.map": "/creditCardMaker/static/js/2.ea4f69d7.chunk.js.map",
+    "index.html": "/creditCardMaker/index.html",
+    "precache-manifest.88168bb8b36489409f68a8774a5d6af5.js": "/creditCardMaker/precache-manifest.88168bb8b36489409f68a8774a5d6af5.js",
+    "service-worker.js": "/creditCardMaker/service-worker.js",
+    "static/css/main.0b446f49.chunk.css.map": "/creditCardMaker/static/css/main.0b446f49.chunk.css.map",
+    "static/media/creditCardImg.png": "/creditCardMaker/static/media/creditCardImg.30c29b2b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a33fb0a.js",
+    "static/js/2.ea4f69d7.chunk.js",
+    "static/css/main.0b446f49.chunk.css",
+    "static/js/main.45b33f56.chunk.js"
+  ]
+}
