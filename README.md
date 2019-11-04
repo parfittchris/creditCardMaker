@@ -1,10 +1,11 @@
 # CREDIT CARD DESIGN APP
-[Live] (http://www.chrisparfitt.com/creditCardMaker/)
+Live Link: http://www.chrisparfitt.com/creditCardMaker/
 
 ### DESCRIPTION
 This is a simple app that allows users to customize a credit card. Customizeable fields include Name, Credit Card Number, Expiration Date, and CVV code. Users input info in form element and see the changes updated live in the credit card sample image. Image fields are highlighted as they are being updated.
 
-![AppScreenShot](/src/assets/appScreenShot.png
+![AppScreenShot](https://github.com/parfittchris/creditCardMaker/blob/master/src/assets/appScreenShot.png)
+
 ### CREATION
 This app was created using the Create React App (https://github.com/facebook/create-react-app). It consists of one Class Component (Form) and one Functional Component(Card Image).
 
