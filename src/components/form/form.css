@@ -1,0 +1,82 @@
+body {
+  background-color: rgb(185, 169, 199);
+}
+
+.cardForm {
+  height: 65vh;
+  width: 45vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px gray;
+  background-color: white;
+}
+
+.formContent {
+  margin-top: -25%;
+  padding: 25% 10% 5% 10%;
+  font-size: 12px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cardNumberSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardNumberSection label {
+  margin-bottom: 1%;
+  margin-left: 5%;
+  font-size: 16px;
+}
+
+.cardNumbers {
+  font-size: 18px;
+  display: flex;
+}
+
+.cardNumbers label {
+  margin-top: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.cardNumbers input {
+  font-size: 18px;
+  text-align: center;
+  width: 10%;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 5%;
+}
+
+.cardHolderSection {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHolderSection label {
+  font-size: 16px;
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+
+.cardHolderSection input {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 70%;
+  margin-left: 5%;
+  padding-left: 2%;
+}
+
+.selectorSection {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
