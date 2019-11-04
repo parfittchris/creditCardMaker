@@ -4,7 +4,7 @@ import './card.css';
 
 export default function Card(props) {
   let {
-    cardholder,
+    cardHolder,
     one,
     two,
     three,
@@ -34,7 +34,7 @@ export default function Card(props) {
       <img className='cardImg' src={CardImg} alt='' />
       <div className='cardHolderCard'>
         <p className='cardHolderTitle text'>Cardholder</p>
-        <p className='nameInput text'>{cardholder}</p>
+        <p className='nameInput text'>{cardHolder}</p>
       </div>
       <div className='numberInputCard'>
         <div className='firstSect cardSection'>

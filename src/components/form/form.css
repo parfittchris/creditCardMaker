@@ -150,3 +150,8 @@ input:focus {
 .submitButton:focus {
   outline: none;
 }
+
+.fadeIn {
+  transition-duration: 1.5s;
+  opacity: 1;
+}

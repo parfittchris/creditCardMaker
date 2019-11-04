@@ -9,6 +9,7 @@ class CardForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.numbersOnly = this.numbersOnly.bind(this);
     this.makeActive = this.makeActive.bind(this);
+    this.formSubmit = this.formSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -29,6 +30,11 @@ class CardForm extends React.Component {
       option.text = yearNum;
       years.add(option);
     }
+  }
+
+  formSubmit(e) {
+    e.preventDefault();
+    window.alert('Wow, cool card!');
   }
 
   makeActive(e) {
@@ -116,7 +122,11 @@ class CardForm extends React.Component {
     return (
       <div onClick={this.makeActive}>
         <Card info={this.state} />
-        <form className='cardForm' autoComplete='off'>
+        <form
+          className='cardForm'
+          autoComplete='off'
+          onSubmit={this.formSubmit}
+        >
           <div className='formContent'>
             <div className='cardNumberSection'>
               <label className='numberLabel'>Number</label>
@@ -169,7 +179,7 @@ class CardForm extends React.Component {
                 type='text'
                 className='cardHolder'
                 name=''
-                id='cardholder'
+                id='cardHolder'
                 maxlength='28'
                 onChange={this.handleChange}
                 onClick={this.makeActive}
