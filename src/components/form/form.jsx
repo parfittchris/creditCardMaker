@@ -43,7 +43,6 @@ class CardForm extends React.Component {
     let element = document.getElementsByClassName(
       e.target.classList + 'Card'
     )[0];
-
     if (element) {
       element.classList.add('active');
     }
@@ -95,6 +94,15 @@ class CardForm extends React.Component {
           fourteen: split[1],
           fifteen: split[2],
           sixteen: split[3]
+        });
+        break;
+      case 'cvv':
+        split = value.split('');
+        this.setState({
+          cvv1: split[0],
+          cvv2: split[1],
+          cvv3: split[2],
+          cvv4: split[3]
         });
         break;
       default:
@@ -174,7 +182,7 @@ class CardForm extends React.Component {
                   <select
                     name=''
                     id='monthSelector'
-                    className='expirationSection selector'
+                    className='expirationSection'
                     onChange={this.handleChange}
                     onClick={this.makeActive}
                   >
@@ -186,7 +194,7 @@ class CardForm extends React.Component {
                   <select
                     name=''
                     id='yearSelector'
-                    className='expirationSection selector'
+                    className='expirationSection'
                     onChange={this.handleChange}
                     onClick={this.makeActive}
                   >
@@ -197,14 +205,14 @@ class CardForm extends React.Component {
                 </div>
               </div>
 
-              <div className='cwSection'>
-                <label className='cwLabel'>CW</label>
+              <div className='cvvSection'>
+                <label className='cvvLabel'>CVV</label>
                 <input
                   type='text'
-                  className='cw'
+                  className='cvv'
                   name=''
-                  id='cw'
-                  maxlength='3'
+                  id='cvv'
+                  maxlength='4'
                   onChange={this.handleChange}
                   onKeyPress={this.numbersOnly}
                   onClick={this.makeActive}
