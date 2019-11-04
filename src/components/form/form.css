@@ -9,11 +9,12 @@ body {
   border-radius: 10px;
   box-shadow: 5px 5px 20px gray;
   background-color: white;
+  font-family: 'Lato', sans-serif;
 }
 
 .formContent {
   margin-top: -25%;
-  padding: 25% 10% 5% 10%;
+  padding: 25% 5% 5% 10%;
   font-size: 12px;
   height: 50%;
   display: flex;
@@ -63,6 +64,7 @@ input:focus {
 .cardHolderSection label {
   font-size: 16px;
   margin-left: 5%;
+  margin-top: 2%;
   margin-bottom: 1%;
 }
 
@@ -79,4 +81,68 @@ input:focus {
   width: 80%;
   display: flex;
   justify-content: space-around;
+  margin-left: 5%;
+}
+
+.expireSection {
+  display: flex;
+  flex-direction: column;
+  width: 66%;
+}
+
+.expireLabel {
+  font-size: 16px;
+  margin: 2% 0;
+}
+
+#monthSelector {
+  margin-right: 10%;
+}
+
+.selector {
+  width: 40%;
+  font-size: 18px;
+  height: 40px;
+  background-color: white;
+}
+
+.cwSection {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cwLabel {
+  font-size: 16px;
+  margin: 3% 0;
+}
+
+.cwSection input {
+  height: 35px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.submitButton {
+  height: 50px;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 80%;
+  background-color: rgb(60, 60, 253);
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 0;
+  box-shadow: 5px 5px 20px gray;
+}
+
+.submitButton:active {
+  background-color: rgb(43, 43, 179);
+}
+
+.submitButton:focus {
+  outline: none;
 }

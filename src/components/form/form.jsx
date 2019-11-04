@@ -156,7 +156,7 @@ class CardForm extends React.Component {
               </div>
             </div>
             <div className='cardHolderSection'>
-              <label className='cardHolderLabel'>Name</label>
+              <label className='cardHolderLabel'>Cardholder</label>
               <input
                 type='text'
                 className='cardHolder'
@@ -168,35 +168,50 @@ class CardForm extends React.Component {
               />
             </div>
             <div className='selectorSection'>
-              <select
-                name=''
-                id='monthSelector'
-                className='expirationSection'
-                onChange={this.handleChange}
-                onClick={this.makeActive}
-              >
-                Month
-              </select>
-              <select
-                name=''
-                id='yearSelector'
-                className='expirationSection'
-                onChange={this.handleChange}
-                onClick={this.makeActive}
-              >
-                Year
-              </select>
-              <label className='cwLabel'>CW</label>
-              <input
-                type='text'
-                className='cw'
-                name=''
-                id='cw'
-                maxlength='4'
-                onChange={this.handleChange}
-                onClick={this.makeActive}
-              />
+              <div className='expireSection'>
+                <label className='expireLabel'>Expiration Date</label>
+                <div className='expireItems'>
+                  <select
+                    name=''
+                    id='monthSelector'
+                    className='expirationSection selector'
+                    onChange={this.handleChange}
+                    onClick={this.makeActive}
+                  >
+                    <option value='MM' selected disabled>
+                      Month
+                    </option>
+                  </select>
+
+                  <select
+                    name=''
+                    id='yearSelector'
+                    className='expirationSection selector'
+                    onChange={this.handleChange}
+                    onClick={this.makeActive}
+                  >
+                    <option value='YY' selected disabled>
+                      Year
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div className='cwSection'>
+                <label className='cwLabel'>CW</label>
+                <input
+                  type='text'
+                  className='cw'
+                  name=''
+                  id='cw'
+                  maxlength='3'
+                  onChange={this.handleChange}
+                  onKeyPress={this.numbersOnly}
+                  onClick={this.makeActive}
+                />
+              </div>
             </div>
+            <button className='submitButton'>Submit</button>
           </div>
         </form>
       </div>
