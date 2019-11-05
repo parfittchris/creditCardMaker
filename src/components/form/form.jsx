@@ -5,11 +5,14 @@ import './form.css';
 class CardForm extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      card: 'front'
+    };
     this.handleChange = this.handleChange.bind(this);
     this.numbersOnly = this.numbersOnly.bind(this);
     this.makeActive = this.makeActive.bind(this);
     this.formSubmit = this.formSubmit.bind(this);
+    this.flipCard = this.flipCard.bind(this);
   }
 
   componentDidMount() {
@@ -37,7 +40,39 @@ class CardForm extends React.Component {
     window.alert('Wow, cool card!');
   }
 
+  flipCard(e) {
+    let elements = Array.from(document.getElementsByClassName('text'));
+    let backEle = document.getElementById('backText');
+    let card = document.getElementsByClassName('cardSectionOverall')[0];
+    let card2 = document.getElementsByClassName('flip-card')[0];
+
+    if (!e.target.id) {
+    } else if (e.target.id === 'cvv') {
+      elements.forEach(ele => {
+        ele.style.visibility = 'hidden';
+      });
+
+      card.classList.add('flip');
+      card2.classList.add('flip');
+
+      setTimeout(function() {
+        backEle.style.visibility = 'visible';
+      }, 500);
+    } else {
+      setTimeout(function() {
+        elements.forEach(ele => {
+          ele.style.visibility = 'visible';
+        });
+      }, 500);
+
+      card.classList.remove('flip');
+      card2.classList.remove('flip');
+      backEle.style.visibility = 'hidden';
+    }
+  }
+
   makeActive(e) {
+    this.flipCard(e);
     let actives = Array.from(document.getElementsByClassName('active'));
 
     if (actives.length > 0) {
@@ -49,6 +84,7 @@ class CardForm extends React.Component {
     let element = document.getElementsByClassName(
       e.target.classList + 'Card'
     )[0];
+
     if (element) {
       element.classList.add('active');
     }
@@ -107,8 +143,7 @@ class CardForm extends React.Component {
         this.setState({
           cvv1: split[0],
           cvv2: split[1],
-          cvv3: split[2],
-          cvv4: split[3]
+          cvv3: split[2]
         });
         break;
       default:
@@ -222,7 +257,7 @@ class CardForm extends React.Component {
                   className='cvv'
                   name=''
                   id='cvv'
-                  maxlength='4'
+                  maxlength='3'
                   onChange={this.handleChange}
                   onKeyPress={this.numbersOnly}
                   onClick={this.makeActive}

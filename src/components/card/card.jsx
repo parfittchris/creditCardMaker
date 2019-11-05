@@ -1,5 +1,6 @@
 import React from 'react';
 import CardImg from './../../assets/creditCardImg.png';
+import CardBack from './../../assets/cardBack.png';
 import './card.css';
 
 export default function Card(props) {
@@ -25,13 +26,19 @@ export default function Card(props) {
     yearSelector,
     cvv1,
     cvv2,
-    cvv3,
-    cvv4
+    cvv3
   } = props.info;
 
   return (
     <div className='cardSectionOverall'>
-      <img className='cardImg' src={CardImg} alt='' />
+      <div className='flip-card'>
+        <div className='flip-card-front'>
+          <img className='cardImg' id='cardImg' src={CardImg} alt='' />
+        </div>
+        <div className='flip-card-back'>
+          <img className='cardImg' id='cardImg' src={CardBack} alt='' />
+        </div>
+      </div>
       <div className='cardHolderCard'>
         <p className='cardHolderTitle text'>Cardholder</p>
         <p className='nameInput text'>{cardHolder}</p>
@@ -70,11 +77,10 @@ export default function Card(props) {
           <p className='expItm text'>{yearSelector || 'YY'}</p>
         </div>
       </div>
-      <div className='cvvCard text'>
+      <div className='cvvCard' id='backText'>
         <p>{cvv1 || '#'}</p>
         <p>{cvv2 || '#'}</p>
         <p>{cvv3 || '#'}</p>
-        <p>{cvv4 || '#'}</p>
       </div>
     </div>
   );
