@@ -16,4 +16,5 @@ This app was created using the Create React App (https://github.com/facebook/cre
 * Updates occur in realtime as the form updates.
 
 # Future Work
-I'd like to add some animations to the rendering of the card. In addition, having a backside image and animating the card turn to see the back would be cool. I'd also like to potentially change the card based on whether it's a Visa, MasterCard, AMEX, etc. 
+I'd like to add some animations to the rendering of the card. ~~In addition, having a backside image and animating the card turn to see the back would be cool.~~ 
+I'd also like to potentially change the card based on whether it's a Visa, MasterCard, AMEX, etc. 
