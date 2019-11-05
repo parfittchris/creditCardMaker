@@ -151,6 +151,25 @@ input:focus {
   outline: none;
 }
 
+.flipButton {
+  top: -80%;
+  right: -80%;
+  position: relative;
+  background-color: rgb(60, 60, 253);
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px gray;
+  width: 12%;
+  height: 25%;
+}
+
+.flipButton:active {
+  background-color: rgb(43, 43, 179);
+}
+
 .fadeIn {
   transition-duration: 1.5s;
   opacity: 1;

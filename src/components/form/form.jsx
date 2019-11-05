@@ -5,9 +5,7 @@ import './form.css';
 class CardForm extends React.Component {
   constructor() {
     super();
-    this.state = {
-      card: 'front'
-    };
+    this.state = {};
     this.handleChange = this.handleChange.bind(this);
     this.numbersOnly = this.numbersOnly.bind(this);
     this.makeActive = this.makeActive.bind(this);
@@ -264,6 +262,7 @@ class CardForm extends React.Component {
                 />
               </div>
             </div>
+
             <button className='submitButton'>Submit</button>
           </div>
         </form>
